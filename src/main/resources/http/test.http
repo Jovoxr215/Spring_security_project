@@ -1,0 +1,33 @@
+### register
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "ali",
+  "email": "ali@gmail.com",
+  "password": "111"
+}
+
+### login
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "ali",
+  "password": "111"
+}
+
+### create
+POST http://localhost:8080/api/todos
+Content-Type: application/json
+Authorization: Bearer token
+
+{
+  "title": "Dars tayyorlash",
+  "description": "Spring Security and Jwt",
+  "completed": false
+}
+
+### getAll
+GET http://localhost:8080/api/todos
+Authorization: Bearer token
